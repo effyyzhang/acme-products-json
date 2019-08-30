@@ -38,10 +38,11 @@ input, button{
           this.setState({ products: ( await axios.get('/api/products')).data});
         }
         async create(){
+          console.log(this.state);
           const maxId = this.state.products.length
           const id = maxId+1
-          const products = [...this.state.products, await axios.post('/api/products'), {id:id ,name:this.state.name, price:this.state.price, error:this.state.error}]
-          this.setState({products})
+          const products = [...this.state.products, await axios.post('/api/products', {id:id ,name:this.state.name, price:this.state.price, error:this.state.error})]
+          this.setState({products, name, price});
         }
 
 
