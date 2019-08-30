@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/effyyzhang/acme-products-json/issues"
   },
-  "homepage": "https://github.com/effyyzhang/acme-products-json#readme"
+  "homepage": "https://github.com/effyyzhang/acme-products-json#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
